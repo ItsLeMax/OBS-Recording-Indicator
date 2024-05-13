@@ -1,0 +1,18 @@
+{
+    "name": "obs-recording-indicator",
+    "description": "OBS addition that shows a recording indicator similar to shadowplay",
+    "keywords": [
+        "obs",
+        "open-broadcaster-software",
+        "recording-indicators"
+    ],
+    "author": "itslemax",
+    "license": "AGPL-3.0-only",
+    "dependencies": {
+        "electron": "^30.0.3",
+        "obs-websocket-js": "^5.0.5"
+    },
+    "scripts": {
+        "start": "electron src/interface/electron.js"
+    }
+}

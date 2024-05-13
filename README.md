@@ -1,2 +1,2 @@
-# obs-recording-indicator
-OBS addition that shows a recording indicator similar to shadowplay
+# OBS-Recording-Indicator
+Invisible background program for OBS that shows recording indicators similar to shadowplay

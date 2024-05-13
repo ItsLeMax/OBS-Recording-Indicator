@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --transition: .2s;
+    --slider: rgb(231, 166, 44);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    -webkit-app-region: drag;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.66);
+
+    display: flex;
+    gap: 4vmin;
+}
+
+h1 {
+    font-size: 4vmin;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    font-size: 3vmin;
+    font-family: math;
+}
+
+h1, p {
+    user-select: none;
+    color: white;
+}
+
+h1, p:not(#indicator-location p) {
+    text-align: center;
+}
+
+#indicator-location, button {
+    -webkit-app-region: no-drag;
+}
+
+#border {
+    display: block;
+    position: absolute;
+
+    width: 5vmin;
+    height: 5vmin;
+
+    background-color: gray;
+}
+
+#window {
+    float: right;
+}
+
+#window button {
+    width: 6vmin;
+    height: 6vmin;
+
+    cursor: pointer;
+    border: none;
+
+    font-size: 2vmin;
+    color: white;
+    background-color: rgb(30, 30, 30);
+}
+
+#window button:hover {
+    background-color: rgb(210, 75, 75);
+}
+
+#indicator-location {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmin;
+}
+
+#indicator-location div {
+    display: flex;
+    gap: 2vmin;
+}
+
+#indicator-location div p {
+    display: block;
+    font-size: 3vmin;
+    border: .5vmin solid rgb(15, 15, 15);
+
+    width: 15vmin;
+    height: 15vmin;
+
+    background-image: url("../img/windows-10.jpg");
+    background-size: 30vmin;
+    background-position-x: -14vmin;
+    opacity: 50%;
+}
+
+#indicator-location div p:hover {
+    cursor: pointer;
+    transition: .3s;
+
+    filter: brightness(150%);
+}
+
+#il-2, #il-4 {
+    text-align: right;
+}
+
+#il-3, #il-4 {
+    line-height: 26vmin;
+}
+
+#compact-info div {
+    width: 25vmin;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 6vmin;
+    height: 3.4vmin;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.6vmin;
+    width: 2.6vmin;
+    left: .4vmin;
+    bottom: .4vmin;
+    background-color: white;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+}
+
+input:checked+.slider {
+    background-color: var(--slider);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 .1vmin var(--slider);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(2.6vmin);
+    -ms-transform: translateX(2.6vmin);
+    transform: translateX(2.6vmin);
+}
+
+.slider.round {
+    border-radius: 3.4vmin;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

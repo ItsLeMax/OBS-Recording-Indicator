@@ -45,7 +45,7 @@ h1, p:not(#indicator-location p) {
     text-align: center;
 }
 
-#indicator-location, button {
+button, label, #indicator-location {
     -webkit-app-region: no-drag;
 }
 

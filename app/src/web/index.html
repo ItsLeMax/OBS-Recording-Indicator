@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OBS Recording Indicator - Settings</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="../../../resources/icons/obs-inverted.png">
+
+    <script type="text/javascript" src="../../../resources/misc/websocket.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+    <div id="window">
+        <button id="minimize">-</button>
+        <button id="restart">⟳</button>
+        <button id="close">X</button>
+    </div>
+
+    <div id="content">
+        <div id="indicator-location">
+            <h1>Indicator Location</h1>
+            <div>
+                <span id="il-1">🟥</span>
+                <span id="il-2">🟥</span>
+            </div>
+            <div>
+                <span id="il-3">🟥</span>
+                <span id="il-4">🟥</span>
+            </div>
+        </div>
+
+        <!-- <div id="indicator-size"></div> -->
+
+        <div id="compact-info">
+            <h1>Compact Hint <br> of saved Clip</h1>
+            <div>
+                <p>Remove text info when saving a clip and change the icon instead:</p>
+                <label class="switch"><input type="checkbox"><span class="slider round"></span></label>
+            </div>
+        </div>
+    </div>
+</body>

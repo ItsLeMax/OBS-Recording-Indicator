@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 :root {
@@ -8,69 +9,55 @@
     --slider: rgb(231, 166, 44);
 }
 
-html {
-    width: 100%;
-    height: 100%;
-    -webkit-app-region: drag;
-}
-
 body {
     background-color: rgb(20, 20, 20);
+    overflow: hidden;
+}
 
+h1 {
+    font-size: 8vmin;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+span, p {
+    font-size: 6vmin;
+    font-family: math;
+}
+
+h1, p {
+    color: white;
+    text-align: center;
+}
+
+#content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.66);
+    transform: translate(-50%, -50%);
 
     display: flex;
     gap: 4vmin;
 }
 
-h1 {
-    font-size: 4vmin;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-p {
-    font-size: 3vmin;
-    font-family: math;
-}
-
-h1, p {
-    user-select: none;
-    color: white;
-}
-
-h1, p:not(#indicator-location p) {
-    text-align: center;
-}
-
-button, label, #indicator-location {
-    -webkit-app-region: no-drag;
-}
-
-#border {
-    display: block;
-    position: absolute;
-
-    width: 5vmin;
-    height: 5vmin;
-
-    background-color: gray;
-}
-
 #window {
-    float: right;
+    width: 100%;
+    background-color: rgb(40, 40, 40);
+
+    display: flex;
+    justify-content: right;
+
+    -webkit-app-region: drag;
 }
 
 #window button {
-    width: 6vmin;
-    height: 6vmin;
+    width: 12vmin;
+    height: 12vmin;
 
     cursor: pointer;
     border: none;
+    -webkit-app-region: no-drag;
 
-    font-size: 2vmin;
+    font-size: 5vmin;
     color: white;
     background-color: rgb(30, 30, 30);
 }
@@ -90,21 +77,21 @@ button, label, #indicator-location {
     gap: 2vmin;
 }
 
-#indicator-location div p {
+#indicator-location div span {
     display: block;
-    font-size: 3vmin;
+    font-size: 6vmin;
     border: .5vmin solid rgb(15, 15, 15);
 
-    width: 15vmin;
-    height: 15vmin;
+    width: 30vmin;
+    height: 30vmin;
 
     background-image: url("../img/windows-10.jpg");
-    background-size: 30vmin;
-    background-position-x: -14vmin;
+    background-size: 60vmin;
+    background-position-x: -28vmin;
     opacity: 50%;
 }
 
-#indicator-location div p:hover {
+#indicator-location div span:hover {
     cursor: pointer;
     transition: .3s;
 
@@ -116,11 +103,11 @@ button, label, #indicator-location {
 }
 
 #il-3, #il-4 {
-    line-height: 26vmin;
+    line-height: 52vmin;
 }
 
 #compact-info div {
-    width: 25vmin;
+    width: 50vmin;
 
     display: flex;
     flex-direction: column;
@@ -130,8 +117,8 @@ button, label, #indicator-location {
 .switch {
     position: relative;
     display: inline-block;
-    width: 6vmin;
-    height: 3.4vmin;
+    width: 12vmin;
+    height: 6.8vmin;
 }
 
 .switch input {
@@ -155,10 +142,10 @@ button, label, #indicator-location {
 .slider:before {
     position: absolute;
     content: "";
-    height: 2.6vmin;
-    width: 2.6vmin;
-    left: .4vmin;
-    bottom: .4vmin;
+    height: 5.2vmin;
+    width: 5.2vmin;
+    left: .8vmin;
+    bottom: .8vmin;
     background-color: white;
     -webkit-transition: var(--transition);
     transition: var(--transition);
@@ -173,13 +160,13 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(2.6vmin);
-    -ms-transform: translateX(2.6vmin);
-    transform: translateX(2.6vmin);
+    -webkit-transform: translateX(5.2vmin);
+    -ms-transform: translateX(5.2vmin);
+    transform: translateX(5.2vmin);
 }
 
 .slider.round {
-    border-radius: 3.4vmin;
+    border-radius: 6.8vmin;
 }
 
 .slider.round:before {

@@ -1,0 +1,10 @@
+img {
+    width: 2.5vmin;
+    margin: .15vmin .15vmin 0 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    opacity: 75%;
+}

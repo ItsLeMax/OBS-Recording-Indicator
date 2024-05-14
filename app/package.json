@@ -8,11 +8,11 @@
     ],
     "author": "itslemax",
     "license": "AGPL-3.0-only",
+    "scripts": {
+        "start": "electron src/interface/electron.js"
+    },
     "dependencies": {
         "electron": "^30.0.3",
         "obs-websocket-js": "^5.0.5"
-    },
-    "scripts": {
-        "start": "electron src/interface/electron.js"
     }
 }

@@ -12,7 +12,7 @@ app.whenReady().then(() => {
         frame: false,
         resizable: false,
         autoHideMenuBar: true,
-        icon: path.join(__dirname, "../../../resources/icons/obs-inverted.png")
+        icon: path.join(__dirname, "../../../resources/obs-inverted.png")
     });
 
     settingsPanel.loadFile("../web/index.html");
@@ -25,7 +25,7 @@ app.whenReady().then(() => {
         webPreferences: {
             backgroundThrottling: false
         },
-        icon: path.join(__dirname, "../../../resources/icons/layers.png")
+        icon: path.join(__dirname, "../../../resources/layers.png")
     });
 
     overlay.loadFile("../../../overlay/web/overlay.html");

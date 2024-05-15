@@ -15,18 +15,26 @@ body {
 }
 
 h1 {
-    font-size: 8vmin;
+    font-size: 7vmin;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 span, p {
-    font-size: 6vmin;
-    font-family: math;
+    font-size: 4vmin;
+    font-family: monospace;
 }
 
 h1, p {
     color: white;
     text-align: center;
+}
+
+input {
+    width: 13vmin;
+
+    position: relative;
+    transform: scale(2);
+    transform-origin: 0 0;
 }
 
 #content {
@@ -36,7 +44,7 @@ h1, p {
     transform: translate(-50%, -50%);
 
     display: flex;
-    gap: 4vmin;
+    gap: 2vmin;
 }
 
 #window {
@@ -47,6 +55,10 @@ h1, p {
     justify-content: right;
 
     -webkit-app-region: drag;
+}
+
+#window p {
+    opacity: 25%;
 }
 
 #window button {
@@ -82,8 +94,8 @@ h1, p {
     font-size: 6vmin;
     border: .5vmin solid rgb(15, 15, 15);
 
-    width: 30vmin;
-    height: 30vmin;
+    width: 20vmin;
+    height: 20vmin;
 
     background-image: url("../img/windows-10.jpg");
     background-size: 60vmin;
@@ -103,7 +115,7 @@ h1, p {
 }
 
 #il-3, #il-4 {
-    line-height: 52vmin;
+    line-height: 32vmin;
 }
 
 #compact-info div {
@@ -171,4 +183,58 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+@media (max-aspect-ratio: 4/3) {
+    h1 {
+        font-size: 3vmin;
+    }
+
+    p {
+        font-size: 2vmin;
+    }
+
+    input {
+        width: 25vmin;
+    }
+
+    #indicator-location div {
+        justify-content: center;
+    }
+
+    #indicator-location div span {
+        width: 15vmin;
+        height: 15vmin;
+
+        font-size: 4vmin;
+    }
+
+    #il-3, #il-4 {
+        line-height: 24.5vmin;
+    }
+
+    #content {
+        flex-direction: column;
+    }
+
+    #compact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .switch {
+        width: 8vmin;
+        height: 3.8vmin;
+    }
+
+    .slider:before {
+        width: 3.2vmin;
+        height: 3.2vmin;
+        bottom: .3vmin;
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(3.5vmin);
+    }
 }

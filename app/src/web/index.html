@@ -8,14 +8,15 @@
 
     <title>OBS Recording Indicator - Settings</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="../../../resources/icons/obs-inverted.png">
+    <link rel="icon" type="image/x-icon" href="../../../resources/obs-inverted.png">
 
-    <script type="text/javascript" src="../../../resources/misc/websocket.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </head>
 
 <body>
     <div id="window">
+        <p>Work in Progress!</p>
+
         <button id="minimize">-</button>
         <button id="restart">⟳</button>
         <button id="close">X</button>
@@ -34,7 +35,13 @@
             </div>
         </div>
 
-        <!-- <div id="indicator-size"></div> -->
+        <div id="indicator-size">
+            <h1>Indicator Size</h1>
+            <div>
+                <p>Change its size as prefered:</p>
+                <input type="range" min="1" max="8" value="2">
+            </div>
+        </div>
 
         <div id="compact-info">
             <h1>Compact Hint <br> of saved Clip</h1>

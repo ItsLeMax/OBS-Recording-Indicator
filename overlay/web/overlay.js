@@ -1,7 +1,7 @@
 const fileNames = ["record", "replay", "stream", "replay-record", "stream-record", "stream-replay", "stream-replay-record"];
 
 document.addEventListener("DOMContentLoaded", () => {
-    const websocket = connectWithSocket();
+    const websocket = new WebSocket("ws://localhost:4460");
 
     websocket.addEventListener("message", (message) => {
         const image = document.getElementsByTagName("img")[0];

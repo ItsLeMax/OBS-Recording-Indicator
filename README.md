@@ -1,5 +1,5 @@
 # OBS Recording Indicator
-OBS addition that shows a recording indicator similar to shadowplay
+Shows a recording indicator similar to shadowplay
 
 > [!IMPORTANT]
 > This project has been canceled since I found a very well working alternative [here](https://github.com/DmitriySalnikov/OBSNotifier), making this project - at least for me - obsolete. Planned features that have not been finished:\

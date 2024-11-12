@@ -1,18 +1,28 @@
 {
     "name": "obs-recording-indicator",
     "description": "OBS addition that shows a recording indicator similar to shadowplay",
-    "keywords": [
-        "obs",
-        "open-broadcaster-software",
-        "recording-indicators"
-    ],
-    "author": "itslemax",
-    "license": "AGPL-3.0-only",
-    "scripts": {
-        "start": "electron src/interface/electron.js"
-    },
     "dependencies": {
         "electron": "^30.0.3",
         "obs-websocket-js": "^5.0.5"
-    }
+    },
+    "scripts": {
+        "start": "electron src/interface/electron.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ItsLeMax/OBS-Recording-Indicator.git"
+    },
+    "keywords": [
+        "OBS",
+        "Open-Broadcaster-Software",
+        "Recording",
+        "Indicator",
+        "Shadowplay"
+    ],
+    "author": "itslemax",
+    "license": "AGPL-3.0-only",
+    "bugs": {
+        "url": "https://github.com/ItsLeMax/OBS-Recording-Indicator/issues"
+    },
+    "homepage": "https://github.com/ItsLeMax/OBS-Recording-Indicator#readme"
 }

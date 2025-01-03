@@ -37,7 +37,7 @@ app.whenReady().then(() => {
 
     let webSocket;
     new WebSocket.Server({ port: "4460" }).on("connection", (socket) => {
-        webSocket = socket.on('message', (message) => {
+        webSocket = socket.on("message", (message) => {
             switch (JSON.parse(message)) {
                 case "close":
                     app.quit();

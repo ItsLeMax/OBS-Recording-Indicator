@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         for (const fileName of fileNames) {
-            if (JSON.stringify(active.slice().sort()) == JSON.stringify(fileName.split('-').sort())) {
+            if (JSON.stringify(active.slice().sort()) == JSON.stringify(fileName.split("-").sort())) {
                 image.src = `../img/${fileName}.png`;
                 return;
             }

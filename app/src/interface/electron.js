@@ -36,7 +36,7 @@ app.whenReady().then(() => {
     overlay.on("closed", () => app.quit());
 
     let webSocket;
-    new WebSocket.Server({ port: "4460" }).on("connection", (socket) => {
+    new WebSocket.Server({ port: "4455" }).on("connection", (socket) => {
         webSocket = socket.on("message", (message) => {
             switch (JSON.parse(message)) {
                 case "close":
@@ -124,7 +124,8 @@ app.whenReady().then(() => {
         const interval = 3;
 
         try {
-            await obs.connect("ws://192.168.80.1:4455", "UVI8aRGWDQtgdpqP");
+            // Test Websocket Login
+            await obs.connect("ws://192.168.178.72:4455", "lYafqqVbkaZn82Ct");
         } catch (error) {
             console.warn(
                 `Konnte keine Verbindung mit OBS herstellen. Erneuter Versuch in ${interval} Sekunden...` + "\n" +
